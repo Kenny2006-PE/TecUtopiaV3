@@ -1,0 +1,68 @@
+/* sidebar.css */
+body {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #343a40;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 15px 8px 15px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+    margin-left: 250px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.sidebar.collapsed {
+    width: 0;
+    padding-top: 60px;
+}
+
+
+
+#main.collapsed {
+    margin-left: 0;
+}
+
+.toggle-btn {
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1;
+    color: #343a40;
+}

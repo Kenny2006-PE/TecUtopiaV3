@@ -1,0 +1,95 @@
+body {
+    background-image: url('../../public/image/image1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.form-container {
+    border: 2px solid #1278BF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    animation: cambioColor 8s infinite alternate;
+}
+
+@keyframes cambioColor {
+    0% { border-color: #1278BF; }
+    25% { border-color: #FF5733; }
+    50% { border-color: #2ECC71; }
+    75% { border-color: #F39C12; }
+    100% { border-color: #8E44AD; }
+}
+
+.btn-neon {
+    background-color: transparent;
+    border: 2px solid #08f;
+    color: #08f;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.btn-neon:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background-color: #08f;
+    border-radius: 5px;
+    z-index: -1;
+    transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s;
+}
+
+.btn-neon:hover {
+    background: #65ec59;
+    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+}
+
+.btn-neon:hover:before {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+}
+
+.btn-neon:active {
+    color: #fff;
+    background-color: #b3d9ff;
+}
+
+.btn-neon:active:before {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+}
+
+@keyframes neon {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #08f, 0 0 70px #08f, 0 0 80px #08f, 0 0 100px #08f, 0 0 150px #08f;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #08f, 0 0 35px #08f, 0 0 40px #08f, 0 0 50px #08f, 0 0 75px #08f;
+    }
+}
+
+.btn-neon:focus {
+    animation: neon 1.25s infinite alternate;
+}
+header a {
+    color: #b34e4e; /* Cambia esto al color que prefieras */
+    text-shadow: 2px 5px 9px #22599c;
+    font-size: 20px;
+}
+
+header span {
+    color: #ffffff; /* Cambia esto al color que prefieras */
+    font-size: 8px;
+}
+
